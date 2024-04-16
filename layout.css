@@ -1,0 +1,164 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    background-color: #FFFF;
+    color: #27851f;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.topo{
+    background-color:#365237;
+    padding: 30px;
+    text-align: center;
+    color: #ffffff;
+   
+}
+.topo h1{
+    font-size: 50px;
+}
+
+.container {
+    position: relative;
+    height: 100vh;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: -250px; /* Inicia oculto */
+    width: 250px;
+    background-color:#365237;
+    color: #fff;
+    height: 100%;
+    transition: right 0.5s;
+}
+
+.content {
+    padding: 20px;
+}
+.menu-toggle {
+        position: absolute;
+        top: 16%; /* Posiciona o botão no meio verticalmente */
+        right: 20px;
+        cursor: pointer;
+        z-index: 2;
+        
+    }
+    
+.menu-item {
+    padding: 25px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.menu-item:hover {
+    background-color: #555;
+}
+
+.content h2 {
+    margin-top: 0;
+}
+
+.menuTopo ul{
+    display: inline-block;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menuTopo ul li{
+    float: left;
+}
+
+.menuTopo a{
+    display: block;
+    color: #f2f2f2; 
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    float: right;
+    background-color: #29612c;
+    margin: 1px 2px;
+    border-radius: 3px;
+}
+
+.menuTopo a:hover{
+    background-color: #27c942;
+    color: #000;
+    font-weight: bold;
+}
+
+.corpo{
+    width: 1024px;
+    margin: 10px auto;
+}
+
+.corpo:after{
+    clear: both;
+    content: "";
+    display: table;
+}
+
+.esquerda{
+    width: 75%;
+    float: left;
+}
+
+.direita{
+    width: 25%;
+    float: right;
+    align-items: l;
+}
+
+footer{
+    background-color: #ddd;
+    padding: 20px;
+    text-align: center;
+    margin-top: 10px;
+}
+.logo-left, .logo-right {
+    position: absolute;
+    top: 15%;
+    transform: translateY(-50%);
+    height: auto;
+}
+.logo-left {
+    left: 25px;
+}
+.logo-right {
+    right: 20px;
+    
+}   
+
+@media screen and (max-width: 1028px) {
+    .esquerda, .direita{
+        width: 100%;
+        padding: 10px;
+    }
+
+    .corpo{
+        width: 100%;
+        padding: 5px;
+        margin: 0;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .menuTopo ul li, .menuTopo a {
+        float: none;
+        width: 100%;
+        border-radius: 0px;
+    }    
+    .menuTopo ul{
+        width: 100%;
+
+    }
+}
+
+
+
+
+
